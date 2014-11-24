@@ -16,8 +16,8 @@ angular.module('jugModule').factory('SharedData', function ($q, $http, $sce, Spr
                         "L": "sponsor2URL", "M": "sponsor2Style",
                         "N": "sponsor3URL", "O": "sponsor3Style",
                         "P": "sponsor4URL", "Q": "sponsor4Style",
-                        "R": "registrationMarginLeft", "S": "weekDay", 
-                        "T": "location", "U": "hour"
+                        "R": "blogURL", "S": "registrationMarginLeft", "T": "weekDay", 
+                        "U": "location", "V": "hour"
                     },
                     "fieldsRequiredToConsiderFilledRow": [ "id" ],
                     "sortBy": [ "id" ]

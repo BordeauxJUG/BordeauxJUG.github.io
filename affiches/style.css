@@ -147,3 +147,7 @@ strong {
 #sponsors img {
     position: absolute;
 }
+#qrcode {
+    margin-top: 160px;
+    margin-left: 325px;
+}

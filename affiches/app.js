@@ -10,6 +10,11 @@ jugModule.controller('mainCtrl', function($scope, $q, $location, SharedData){
         if(!$scope.prez){
             alert("Invalid id !");
         }
+        new QRCode("qrcode", {
+          text: $scope.prez.blogURL,
+          width: 128,
+          height: 128
+        });
     }, errorMessage("Cannot load SharedData"));
 });
 
@@ -20,9 +25,9 @@ jugModule.config(function($sceProvider) {
 
 jugModule.run(function($location, SharedData) {
     SharedData.init({
-        offline: 
-            $location.absUrl().indexOf("file://")===0 
-                || $location.search().offline===true
+        offline: false
+//             $location.absUrl().indexOf("file://")===0 
+//                 || $location.search().offline===true
     });
 });
 
