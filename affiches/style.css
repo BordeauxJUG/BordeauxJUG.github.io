@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Code;
+    src: url("CODE Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Code;
+    font-weight: bold;
+    src: url("CODE Bold.otf") format("opentype");
+}
+body {
+    font-family: Code;
+    background-image: url('Template.png');
+    background-repeat: no-repeat;
+    height: 1035px;
+}
+strong {
+    font-weight: bold;
+    color: #b21e2d;
+}
+#header {
+    position: absolute;
+    top: 160px;
+    left: 205px;
+    width: 380px;
+    height: 100px;
+    font-size: 1.7em;
+}
+.header-text {
+    font-weight: bold;
+    color: white;
+}
+#student-friendly {
+    position: absolute;
+    top: 0px;
+    left: 645px;
+}
+#speaker-name {
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 18px;
+}
+#location {
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+}
+#date-container {
+    position: absolute;
+    left: 575px;
+    top: 130px;
+    width: 165px;
+    height: 155px;
+}
+#day-of-month {
+    position: absolute;
+    font-size: 7.5em;
+    margin-left: 32px;
+    width: 132px;
+    text-align: center;
+    padding-left: 3px;
+}
+#month {
+    position: absolute;
+    top: 100px;
+    margin-left: 32px;
+    font-size: 2.5em;
+    width: 132px;
+    text-align: left;
+    padding-left: 3px;
+}
+#day-of-week {
+    bottom: 44px;
+    position: absolute;
+    transform: rotate(-90deg);
+    font-size: 1.5em;
+    left: -5px;
+}
+#time {
+    color: #be1e2d;
+    position: absolute;
+    left: 600px;
+    top: 250px;
+    font-weight: bold;
+}
+#time .hour {
+    font-size: 9em;
+}
+#time .unit {
+    font-size: 3em;
+    margin-left: -15px;
+}
+#prez {
+    position: absolute;
+    top: 280px;
+    width: 730px;
+}
+#title {
+    margin-left: 160px;
+    width: 420px;
+    font-family: Code;
+    text-align: center;
+    color: #be1e2d;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+.left-col {
+
+}
+#speaker-img {
+    position: absolute;
+    width: 130px;
+    margin-top: 15px;
+}
+#speaker-img img {
+    border: 2px solid #be1e2d;
+}
+.right-col {
+    margin-left: 130px;
+    font-family: Verdana;
+    text-align: justify;
+}
+#abstract {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 700px;
+}
+#intro {
+    font-style: italic;
+    width: 440px;
+    font-size: 1em;
+}
+#description {
+    margin-top: 20px;
+    padding-right: 10px;
+    font-size: 0.9em;
+}
+#registration {
+    padding-top: 35px;
+}
+#sponsors {
+    position: absolute;
+    top: 725px;
+    height: 315px;
+    margin-left: 240px;
+}
+#sponsors img {
+    position: absolute;
+}

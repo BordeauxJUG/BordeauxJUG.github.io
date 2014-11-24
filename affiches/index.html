@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="errors.js"></script>
+    <script type="text/javascript" src="lodash.js"></script>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="SpreadsheetReader.js"></script>
+    <script type="text/javascript" src="SharedData.js"></script>
+  </head>
+  <body ng-controller="mainCtrl">
+    <div id="student-friendly" ng-show="prez.studentFriendly"><img src="Students.png" /></div>
+    <div id="header" class="header-text">
+        <div id="speaker-name">{{prez.speakerName}}</div>
+        <div id="location">{{prez.location}}</div>
+    </div>
+    <div id="date-container">
+        <div id="day-of-week" class="header-text">{{prez.weekDay}}</div>
+        <div id="day-of-month" class="header-text">{{prez.monthDay}}</div>
+        <div id="month" class="header-text">{{prez.month}}</div>
+    </div>
+    <div id="time"><span class="hour">{{prez.hour}}</span><span class="unit">H</span></div>
+    <div id="prez">
+        <div id="title">{{prez.title}}</div>
+        <div id="abstract">
+          <div class="left-col">
+            <div id="speaker-img"><img ng-src="{{prez.speakerAvatar}}" /></div>
+          </div>
+          <div class="right-col">
+            <div id="intro" ng-bind-html="prez.intro">
+            </div>
+            <div id="description" ng-bind-html="prez.description">
+            </div>
+            <div id="registration" ng-style="prez.registrationStyle">
+                <span>Alors n'attendez pas, inscrivez-vous vite !</span>
+                <br/>
+                Inscriptions : <strong>bordeauxjug.org</strong>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="sponsors">
+      <img ng-src="{{sponsor.url}}" ng-style="sponsor.style" ng-repeat="sponsor in prez.sponsors" />
+    </div>
+  </body>
+</html>
