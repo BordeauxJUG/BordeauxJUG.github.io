@@ -17,7 +17,8 @@ angular.module('jugModule').factory('SharedData', function ($q, $http, $sce, Spr
                         "N": "sponsor3URL", "O": "sponsor3Style",
                         "P": "sponsor4URL", "Q": "sponsor4Style",
                         "R": "blogURL", "S": "registrationMarginLeft", "T": "weekDay", 
-                        "U": "location", "V": "hour"
+                        "U": "location", "V": "hour", 
+                        "W": "sponsor5URL", "X": "sponsor5Style"
                     },
                     "fieldsRequiredToConsiderFilledRow": [ "id" ],
                     "sortBy": [ "id" ]
@@ -56,7 +57,7 @@ angular.module('jugModule').factory('SharedData', function ($q, $http, $sce, Spr
             ]).then(function(){
                 _.each(self._data['prez'], function(prez) {
                     prez.sponsors = [];
-                    for(var i=1; i<=4; i++){
+                    for(var i=1; i<=5; i++){
                         if(prez['sponsor'+i+'URL']) {
                             prez.sponsors.push({
                                 url: prez['sponsor'+i+'URL'],
@@ -95,3 +96,4 @@ angular.module('jugModule').factory('SharedData', function ($q, $http, $sce, Spr
     };
     return SharedData;
 });
+
