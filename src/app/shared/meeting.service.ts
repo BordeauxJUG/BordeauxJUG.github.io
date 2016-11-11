@@ -6,7 +6,7 @@ import {Meeting} from './meeting.model';
 
 @Injectable()
 export class MeetingService {
-  private baseUrl: string = 'http://bdxjug-api.cleverapps.io/api';
+  private baseUrl: string = 'https://bdxjug-api.cleverapps.io/api';
 
   constructor(private http : Http){
   }
