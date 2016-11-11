@@ -1,6 +1,12 @@
 <md-sidenav-layout>
   <md-sidenav #sidenav mode="side" class="app-sidenav">
-    Sidenav
+    <h2>Navigation</h2>
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active">Accueil</a></li>
+      <li><a routerLink="/meetings" routerLinkActive="active">Rencontres</a></li>
+      <li><a routerLink="/speakers" routerLinkActive="active">Speakers</a></li>
+      <li><a routerLink="/members"  routerLinkActive="active">Membres</a></li>
+    </ul>
   </md-sidenav>
 
   <md-toolbar color="primary">
