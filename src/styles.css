@@ -2,7 +2,7 @@
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 
 /* https://wdexplorer.com/20-examples-beautiful-css-typography-design/ */
-h1 { color: #333333; font-family: 'Bitter', serif; font-size: 50px; font-weight: normal; line-height: 54px; margin: 0 0 54px; }
+h1 { color: #333333; font-family: 'Bitter', serif; font-size: 50px; font-weight: normal; line-height: 40px; margin: 0 0 54px; }
 
 li { color: #333333; font-family: Georgia, serif; font-size: 18px; line-height: 18px; margin: 0 0 18px; }
 
