@@ -16,7 +16,7 @@ git clone -b master ${1-git@}github.com/BordeauxJUG/BordeauxJUG.github.io.git $d
 ng build -prod
 
 # Add new resources
-cp dist/* $dist
+cp -R dist/* $dist
 cd $dist
 git add .
 
