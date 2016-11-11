@@ -29,4 +29,5 @@ La soirée se poursuit généralement par une discussion autour d'un verre et d'
 
 <div *ngFor="let meeting of upcomings">
   <h3>{{meeting.name}}</h3>
+  <p>{{meeting.date.day}}/{{meeting.date.month}}/{{meeting.date.year}}</p>
 </div>
