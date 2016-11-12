@@ -1,0 +1,4 @@
+img[md-card-image] {
+  width: calc(100% + 48px);
+  margin: 0 rem(-2.400) rem(1.600) rem(-2.400);
+}
