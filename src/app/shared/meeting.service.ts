@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import {Meeting} from './meeting.model';
+import { Constants } from './constants';
+import { Meeting } from './meeting.model';
 
 @Injectable()
 export class MeetingService {
-  private baseUrl: string = 'https://bdxjug-api.cleverapps.io/api';
 
   constructor(private http : Http){
   }
 
   getUpcomingMeetings(): Observable<Meeting[]>{
     let meeting$ = this.http
-      .get(`${this.baseUrl}/meetings/upcoming`, {headers: this.getHeaders()})
+      .get(`${Constants.BACKEND_URL}/meetings/upcoming`, {headers: this.getHeaders()})
       .map(res => res.json());
     return meeting$;
   }

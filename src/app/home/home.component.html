@@ -25,9 +25,13 @@ Des rencontres sont organisées <strong>tous les mois, en général le deuxième
 La soirée se poursuit généralement par une discussion autour d'un verre et d'un buffet.
 </p>
 
+<hr/>
+
 <h2>Prochaines soirées :</h2>
 
 <div *ngFor="let meeting of upcomings">
-  <h3>{{meeting.name}}</h3>
-  <p>{{meeting.date.day}}/{{meeting.date.month}}/{{meeting.date.year}}</p>
+  <p class="logo"><a href="{{meeting.registrationLink}}" target="_blank"><img src="assets/images/meetup.png"></a></p>
+  <h3>{{meeting.date.day}}/{{meeting.date.month}}/{{meeting.date.year}}  - {{meeting.name}} ({{meeting.nbAttendees}} inscrits)</h3>
+  <p><a href="https://www.google.com/maps/place/{{meeting.location.geo.latitude}},{{meeting.location.geo.longitude}}" target="_blank">{{meeting.location.name}} - {{meeting.location.address}}</a></p>
+  <div [innerHTML]="meeting.description"></div>
 </div>
