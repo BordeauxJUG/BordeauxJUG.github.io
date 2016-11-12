@@ -18,6 +18,13 @@ export class MeetingService {
     return meeting$;
   }
 
+  getPastMeetings(): Observable<Meeting[]>{
+    let meeting$ = this.http
+      .get(`${Constants.BACKEND_URL}/meetings/past`, {headers: this.getHeaders()})
+      .map(res => res.json());
+    return meeting$;
+  }
+
   private getHeaders(){
     let headers = new Headers();
     headers.append('Accept', 'application/json');

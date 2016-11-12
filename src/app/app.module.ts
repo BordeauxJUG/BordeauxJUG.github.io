@@ -7,7 +7,8 @@ import { MaterialModule } from '@angular/material';
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent} from './home/home.component';
-import { MeetingsComponent} from './meetings/meetings.component';
+import { MeetingListComponent } from './meetings/meeting-list/meeting-list.component';
+import { MeetingDetailComponent } from './meetings/meeting-detail/meeting-detail.component';
 import { SpeakersComponent} from './speakers/speakers.component';
 import { MembersComponent} from './members/members.component';
 
@@ -17,10 +18,11 @@ import {MeetingService} from './shared/meeting.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    MeetingsComponent,
     SpeakersComponent,
     MembersComponent,
-    HomeComponent
+    HomeComponent,
+    MeetingListComponent,
+    MeetingDetailComponent
   ],
   imports: [
     BrowserModule,

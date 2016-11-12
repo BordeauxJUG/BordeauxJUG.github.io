@@ -30,8 +30,5 @@ La soirée se poursuit généralement par une discussion autour d'un verre et d'
 <h2>Prochaines soirées :</h2>
 
 <div *ngFor="let meeting of upcomings">
-  <p class="logo"><a href="{{meeting.registrationLink}}" target="_blank"><img src="assets/images/meetup.png"></a></p>
-  <h3>{{meeting.date.day}}/{{meeting.date.month}}/{{meeting.date.year}}  - {{meeting.name}} ({{meeting.nbAttendees}} inscrits)</h3>
-  <p><a href="https://www.google.com/maps/place/{{meeting.location.geo.latitude}},{{meeting.location.geo.longitude}}" target="_blank">{{meeting.location.name}} - {{meeting.location.address}}</a></p>
-  <div [innerHTML]="meeting.description"></div>
+  <app-meeting-detail [meeting]=meeting></app-meeting-detail>
 </div>
