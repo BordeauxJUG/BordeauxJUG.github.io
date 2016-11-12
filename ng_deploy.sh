@@ -10,10 +10,15 @@ dist=../dist/             # tmp dist directory
 rm -rf $dist
 
 # Cloning master branch (GH PAGES) into dist folder
-git clone -b master ${1-git@}github.com/BordeauxJUG/BordeauxJUG.github.io.git $dist
+git clone -b master https://github.com/BordeauxJUG/BordeauxJUG.github.io.git $dist
 
 # Build app
 ng build -prod
+
+# Clean old resources
+rm $dist/main.*
+rm $dist/styles.*
+rm $dist/inline.*
 
 # Add new resources
 cp -R dist/* $dist
