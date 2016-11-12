@@ -13,6 +13,7 @@ import { SpeakersComponent} from './speakers/speakers.component';
 import { MembersComponent} from './members/members.component';
 
 import {MeetingService} from './shared/meeting.service';
+import {MemberService} from './shared/member.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import {MeetingService} from './shared/meeting.service';
     MaterialModule.forRoot(),
     routes
   ],
-  providers: [MeetingService],
+  providers: [MeetingService, MemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

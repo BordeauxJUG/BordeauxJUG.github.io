@@ -1,3 +1,19 @@
-<p>
-  members works!
-</p>
+<h1>{{memberCount}} membres</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Date d'inscription</th>
+      <th>Fin de validité</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members">
+        <td>{{member.lastName}}</td>
+        <td>{{member.firstName}}</td>
+        <td>{{member.firstRegistration.day}}/{{member.firstRegistration.month}}/{{member.firstRegistration.year}}</td>
+        <td>{{member.endOfValidity.day}}/{{member.endOfValidity.month}}/{{member.endOfValidity.year}}</td>
+    </tr>
+  </tbody>
+</table>
