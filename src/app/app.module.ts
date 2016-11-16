@@ -11,10 +11,9 @@ import { MeetingListComponent } from './meetings/meeting-list/meeting-list.compo
 import { MeetingDetailComponent } from './meetings/meeting-detail/meeting-detail.component';
 import { SpeakersComponent} from './speakers/speakers.component';
 import { MembersComponent} from './members/members.component';
+import { PresentationComponent } from './presentation/presentation.component';
 
-import {MeetingService} from './shared/meeting.service';
-import {MemberService} from './shared/member.service';
-import {SpeakerService} from './shared/speaker.service';
+import {BdxjugService} from './shared/bdxjug.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,8 @@ import {SpeakerService} from './shared/speaker.service';
     MembersComponent,
     HomeComponent,
     MeetingListComponent,
-    MeetingDetailComponent
+    MeetingDetailComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +34,7 @@ import {SpeakerService} from './shared/speaker.service';
     routes
   ],
   providers: [
-    MeetingService, 
-    MemberService,
-    SpeakerService
+    BdxjugService
   ],
   bootstrap: [AppComponent]
 })

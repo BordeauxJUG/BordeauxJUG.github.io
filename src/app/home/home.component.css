@@ -1,0 +1,11 @@
+.Grid {
+  display: flex;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+.Sponsor {
+  flex: 0.2;
+}

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import {Meeting} from '../shared/meeting.model';
-import {MeetingService} from '../shared/meeting.service';
+import {Sponsor} from '../shared/sponsor.model';
+import {BdxjugService} from '../shared/bdxjug.service';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,13 @@ import {MeetingService} from '../shared/meeting.service';
 export class HomeComponent implements OnInit {
 
   upcomings: Meeting[];
+  sponsors: Sponsor[];
 
-  constructor(private meetingService: MeetingService) { }
+  constructor(private service: BdxjugService) { }
 
   ngOnInit() {
-    this.meetingService.getUpcomingMeetings().subscribe(m => this.upcomings = m);
+    this.service.getUpcomingMeetings().subscribe(m => this.upcomings = m);
+    this.service.getSponsors().subscribe(m => this.sponsors = m);
   }
 
 }

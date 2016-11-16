@@ -1,34 +1,28 @@
-<h1>Bienvenue</h1>
+<div class="Grid">
+  <div class="Grid-cell">
 
-<p class="logo">
-  <img src="assets/images/logo.jpg">
-</p>
+    <h1>Bienvenue</h1>
 
-<p>
-L'objectif du <strong>BORDEAUX Java User Group</strong> est de permettre à des acteurs et utilisateurs du langage Java (professionnels, communautés open source, universitaires, étudiants) de 
-<strong>se rencontrer et d'échanger autour des technologies Java.</strong>
-</p>
+    <p>
+      L'objectif du <strong>BORDEAUX Java User Group</strong> est de permettre à des acteurs et utilisateurs du langage Java
+      (professionnels, communautés open source, universitaires, étudiants) de
+      <strong>se rencontrer et d'échanger autour des technologies Java.</strong>
+    </p>
 
-<p>
-Des rencontres sont organisées <strong>tous les mois, en général le deuxième jeudi du mois</strong>, sous forme de réunions <strong>gratuites, ouvertes à tous</strong>. Les réunions prennent la forme :
-</p>
+    <h2>Prochaines soirées </h2>
 
-<ul>
-<li>de présentations techniques</li>
-<li>de démonstrations produit</li>
-<li>de séances de travaux pratiques</li>
-<li>de tables rondes sur l'architecture, l'évolution de Java, l'actualité...</li>
-<li>de retour d'expérience</li>
-</ul>
+    <div *ngFor="let meeting of upcomings">
+      <app-meeting-detail [meeting]=meeting></app-meeting-detail>
+    </div>
 
-<p>
-La soirée se poursuit généralement par une discussion autour d'un verre et d'un buffet.
-</p>
+    <hr/>
 
-<hr/>
+  </div>
+  <div class="Sponsor">
 
-<h2>Prochaines soirées :</h2>
-
-<div *ngFor="let meeting of upcomings">
-  <app-meeting-detail [meeting]=meeting></app-meeting-detail>
+    <div *ngFor="let sponsor of sponsors">
+      <a href="{{sponsor.url}}" target="_blank"><img width="160" src="{{sponsor.image}}" alt={{sponsor.name}}></a>
+      <br/><br/>
+    </div>
+  </div>
 </div>

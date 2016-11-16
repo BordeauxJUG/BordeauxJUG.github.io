@@ -1,17 +1,19 @@
 <md-sidenav-layout>
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
-    <h2>Navigation</h2>
+  <md-sidenav #sidenav mode="side" class="app-sidenav" opened="true">
+    <img src="assets/images/logo.jpg">
+
     <md-list>
       <md-list-item><a routerLink="/" routerLinkActive="active">Accueil</a></md-list-item>
+      <md-list-item><a routerLink="/presentation" routerLinkActive="active">Presentation</a></md-list-item>
       <md-list-item><a routerLink="/meetings" routerLinkActive="active">Rencontres</a></md-list-item>
       <md-list-item><a routerLink="/speakers" routerLinkActive="active">Speakers</a></md-list-item>
-      <md-list-item><a routerLink="/members"  routerLinkActive="active">Membres</a></md-list-item>
+      <md-list-item><a routerLink="/members" routerLinkActive="active">Membres</a></md-list-item>
     </md-list>
   </md-sidenav>
 
   <md-toolbar color="primary">
     <button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
+      &#9776;
     </button> Bordeaux JUG
 
   </md-toolbar>

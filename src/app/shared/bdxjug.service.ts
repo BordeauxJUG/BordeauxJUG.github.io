@@ -4,9 +4,12 @@ import { Observable } from 'rxjs/Rx';
 
 import { Constants } from './constants';
 import { Meeting } from './meeting.model';
+import { Member } from './member.model';
+import { Speaker } from './speaker.model';
+import { Sponsor } from './sponsor.model';
 
 @Injectable()
-export class MeetingService {
+export class BdxjugService {
 
   constructor(private http : Http){
   }
@@ -24,6 +27,28 @@ export class MeetingService {
       .map(res => res.json());
     return meeting$;
   }
+
+  getMembers(): Observable<Member[]>{
+    let member$ = this.http
+      .get(`${Constants.BACKEND_URL}/members`, {headers: this.getHeaders()})
+      .map(res => res.json());
+    return member$;
+  }
+
+  getSpeakers(): Observable<Speaker[]>{
+    let speaker$ = this.http
+      .get(`${Constants.BACKEND_URL}/speakers`, {headers: this.getHeaders()})
+      .map(res => res.json());
+    return speaker$;
+  }
+
+  getSponsors(): Observable<Sponsor[]>{
+    let sponsor$ = this.http
+      .get(`${Constants.BACKEND_URL}/sponsors`, {headers: this.getHeaders()})
+      .map(res => res.json());
+    return sponsor$;
+  }
+
 
   private getHeaders(){
     let headers = new Headers();

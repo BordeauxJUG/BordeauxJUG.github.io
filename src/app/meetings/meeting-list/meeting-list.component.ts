@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {Meeting} from '../../shared/meeting.model';
-import {MeetingService} from '../../shared/meeting.service';
+import {BdxjugService} from '../../shared/bdxjug.service';
 
 @Component({
   selector: 'app-meeting-list',
@@ -12,10 +12,10 @@ export class MeetingListComponent implements OnInit {
 
   meetings: Meeting[];
 
-  constructor(private meetingService:MeetingService) { }
+  constructor(private service: BdxjugService) { }
 
   ngOnInit() {
-      this.meetingService.getPastMeetings().subscribe(m => this.meetings = m);
+      this.service.getPastMeetings().subscribe(m => this.meetings = m);
   }
 
 }
