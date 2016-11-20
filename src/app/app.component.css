@@ -12,3 +12,10 @@
 .sponsor {
   flex: 0.2;
 }
+
+.paypal {
+    width: 200px;
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+}

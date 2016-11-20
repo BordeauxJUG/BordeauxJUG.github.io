@@ -14,6 +14,7 @@ import { MembersComponent} from './members/members.component';
 import { PresentationComponent } from './presentation/presentation.component';
 
 import {BdxjugService} from './shared/bdxjug.service';
+import { PaypalComponent } from './paypal/paypal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {BdxjugService} from './shared/bdxjug.service';
     HomeComponent,
     MeetingListComponent,
     MeetingDetailComponent,
-    PresentationComponent
+    PresentationComponent,
+    PaypalComponent
   ],
   imports: [
     BrowserModule,
