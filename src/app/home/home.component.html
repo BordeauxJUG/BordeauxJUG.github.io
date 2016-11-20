@@ -1,39 +1,26 @@
-<div class="Grid">
-  <div class="Grid-cell">
+<h1>
+  Bienvenue</h1>
 
-    <h1>Bienvenue</h1>
+<p>
+  L'objectif du <strong>BORDEAUX Java User Group</strong> est de permettre à des acteurs et utilisateurs du langage Java
+  (professionnels, communautés open source, universitaires, étudiants) de
+  <strong>se rencontrer et d'échanger autour des technologies Java.</strong>
+</p>
 
-    <p>
-      L'objectif du <strong>BORDEAUX Java User Group</strong> est de permettre à des acteurs et utilisateurs du langage Java
-      (professionnels, communautés open source, universitaires, étudiants) de
-      <strong>se rencontrer et d'échanger autour des technologies Java.</strong>
-    </p>
+<br/>
 
-    <br/>
+<div class="calendar">
+  <iframe src="//www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=300&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=i6ehs40715vk5ktq75nvu7q0do%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FParis"
+    style=" border-width:0 " width="400" height="300" frameborder="0" scrolling="no"></iframe>
 
-    <div class="Calendar">
-      <iframe src="//www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=300&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=i6ehs40715vk5ktq75nvu7q0do%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FParis"
-        style=" border-width:0 " width="400" height="300" frameborder="0" scrolling="no"></iframe>
+  <a href="http://www.google.com/calendar/feeds/i6ehs40715vk5ktq75nvu7q0do@group.calendar.google.com/public/basic"><img src="http://www.google.com/calendar/images/xml.gif" /></a>
+  <a href="http://www.google.com/calendar/ical/i6ehs40715vk5ktq75nvu7q0do@group.calendar.google.com/public/basic.ics"><img src="http://www.google.com/calendar/images/ical.gif" /></a>
+  <a href="http://www.google.com/calendar/embed?src=i6ehs40715vk5ktq75nvu7q0do@group.calendar.google.com&ctz=Europe/Paris"><img src="http://www.google.com/calendar/images/html.gif" /></a>
+</div>
 
-      <a href="http://www.google.com/calendar/feeds/i6ehs40715vk5ktq75nvu7q0do@group.calendar.google.com/public/basic"><img src="http://www.google.com/calendar/images/xml.gif" /></a>
-      <a href="http://www.google.com/calendar/ical/i6ehs40715vk5ktq75nvu7q0do@group.calendar.google.com/public/basic.ics"><img src="http://www.google.com/calendar/images/ical.gif" /></a>
-      <a href="http://www.google.com/calendar/embed?src=i6ehs40715vk5ktq75nvu7q0do@group.calendar.google.com&ctz=Europe/Paris"><img src="http://www.google.com/calendar/images/html.gif" /></a>
-    </div>
+<h2 *ngIf="hasUpcommings">Prochaines soirées </h2>
 
-    <h2 *ngIf="hasUpcommings">Prochaines soirées </h2>
-
-    <div *ngFor="let meeting of upcomings">
-      <app-meeting-detail [meeting]=meeting></app-meeting-detail>
-      <hr/>
-    </div>
-
-  </div>
-
-  <div class="Sponsor">
-
-    <div *ngFor="let sponsor of sponsors">
-      <a href="{{sponsor.url}}" target="_blank"><img width="160" src="{{sponsor.image}}" alt={{sponsor.name}}></a>
-      <br/><br/>
-    </div>
-  </div>
+<div *ngFor="let meeting of upcomings">
+  <app-meeting-detail [meeting]=meeting></app-meeting-detail>
+  <hr/>
 </div>

@@ -19,7 +19,17 @@
   </md-toolbar>
 
   <div class="container">
-    <router-outlet></router-outlet>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="Sponsor">
+      <div *ngFor="let sponsor of sponsors">
+        <a href="{{sponsor.url}}" target="_blank"><img width="160" src="{{sponsor.image}}" alt={{sponsor.name}}></a>
+        <br/><br/>
+      </div>
+    </div>
+
   </div>
-  
+
 </md-sidenav-layout>

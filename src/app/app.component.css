@@ -1,5 +1,14 @@
 .container {
+    display: flex;
     margin-top: 20px;
     margin-right: 5px;
     margin-left: 20px;
+}
+
+.content {
+    flex: 1;
+}
+
+.sponsor {
+  flex: 0.2;
 }
